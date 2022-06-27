@@ -5,10 +5,10 @@ export function getVideogames(name){
     return async dispatch=>{
         try {
             if(name){
-             const resName = await axios.get(`http://localhost:3001/videogames?name=${name}`);  
+             const resName = await axios.get(`/videogames?name=${name}`);  
                return dispatch({ type: GET_VIDEOGAMES, payload: resName.data })
             }else{
-                 const res = await axios.get(`http://localhost:3001/videogames`)
+                 const res = await axios.get(`/videogames`)
             return dispatch({ type: GET_VIDEOGAMES,payload: res.data  });
             }
            
@@ -20,7 +20,7 @@ export function getVideogames(name){
 export function getDetails(id){
     return async dispatch=>{
     try { console.log('holaaaaa')
-            const res = await axios.get(`http://localhost:3001/videogame/${id}`);
+            const res = await axios.get(`/videogame/${id}`);
             console.log('aaaaaaaa', res)
             return dispatch({ type: GET_DETAILS_VIDEOGAMES, payload: res.data });
         } catch (e) {
@@ -38,7 +38,7 @@ export function clearPage(){
 export function getAllGenres(){
     return async dispatch=>{
         try { 
-        const res = await axios.get(`http://localhost:3001/genres`);
+        const res = await axios.get(`/genres`);
         
         return dispatch({ type: ALL_GENRES , payload: res.data });
     } catch (e) {
@@ -76,7 +76,7 @@ export function orderByRating(payload){
 export function CreateVideogame(payload){
     return async dispatch => {
         try {
-        const res = await axios.post(`http://localhost:3001/videogame`, payload);
+        const res = await axios.post(`/videogame`, payload);
         return dispatch({ type: CREATE_VIDEOGAME , payload: res.data});
         
         } catch (res) {
@@ -89,7 +89,7 @@ export function CreateVideogame(payload){
 export function deleteVg(id ,payload){
     return async dispatch => {
         try {
-        const res = await axios.delete(`http://localhost:3001/videogame/${id}`, payload);
+        const res = await axios.delete(`/videogame/${id}`, payload);
         return dispatch({ type: DELETE , payload: res.data}, );
         
         } catch (e) {
@@ -101,7 +101,7 @@ export function deleteVg(id ,payload){
 export function updateVg(id,payload){
     return async dispatch => {
         try {
-        const res = await axios.put(`http://localhost:3001/videogame/${id}`, payload);
+        const res = await axios.put(`/videogame/${id}`, payload);
         return dispatch({ type: UPDATE_VG , payload: res.data}, );
         
         } catch (e) {
