@@ -1,0 +1,31 @@
+.card {
+  border-color: rgb(104, 13, 13);
+  border-radius: 5%;
+  margin: 20px;
+  width: 21rem;
+  height: 30rem;
+  transition: all .3s;
+  background: #14060ed2;
+  
+  -webkit-box-shadow: 5px 5px 15px 5px #f01919; 
+  box-shadow: 5px 5px 15px 5px #ef6e6e;
+}
+ .card:hover {
+  margin-top: -30px;}
+.card-title {
+  margin-bottom: 15px;
+  
+}
+.card-date{
+  color: rgb(187, 123, 45);
+  font-size: 18px;
+  margin-top: 0px;
+}
+.imagen{
+  width: 90%;
+  padding: 4px;
+  margin-left: 15px;
+  box-sizing: border-box;
+  border: solid 1px rgba(213, 213, 58, 0.824) ;
+  background-color: rgba(99, 94, 94, 0.834);
+}
