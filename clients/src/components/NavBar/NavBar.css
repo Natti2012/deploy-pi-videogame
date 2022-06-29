@@ -1,14 +1,14 @@
 .nav{
    width: 250px;
-    -webkit-box-shadow: 0px 0px 20px 8px rgba(138, 178, 230, 0.66); 
-    box-shadow: 0px 0px 11px 12px rgba(14, 121, 192, 0.66);
+   -webkit-box-shadow: 0px 0px 11px 8px rgba(83, 85, 87, 0.66); 
+   box-shadow: 0px 0px 11px 8px rgba(22, 23, 23, 0.66); 
     list-style-type: none;
     /* margin: 20px; */
     /* margin-left: 20px;
     margin-bottom: 20px;
     padding: 20; */
     overflow: hidden;
-    background-color: rgba(124, 165, 210, 0.648);
+    background-color:rgba(166, 48, 48, 0.881);
     /* position: fixed; */
 }
 .letra{
