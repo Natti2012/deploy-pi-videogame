@@ -5,6 +5,7 @@ import DetailVideogame from './components/DetailVideogame';
 import Home from './components/Home';
 import PagInicio from './components/PagInicio';
 
+
 function App() {
   
   return (

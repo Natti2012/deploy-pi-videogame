@@ -147,8 +147,10 @@ function Createvideogame() {
 
   }
   return (
+  <div>
+   <NavBar  />
     <section className='create_backG' >
-      <NavBar className='nav-detail' margin-top="20px" />
+      
 
       <div >
  
@@ -307,6 +309,7 @@ function Createvideogame() {
         </div>
       </div>
     </section>
+     </div>
 
   )
 }

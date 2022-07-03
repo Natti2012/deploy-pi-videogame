@@ -15,14 +15,14 @@ function Home() {
   const allVideoGame = useSelector(state => state.videogames)
   const allGenres = useSelector(state => state.genres)
   const [currentPage, setCurrentPage] = useState(1)
-  const [VGperPage] = useState(15)
+  const [VGperPage] = useState(16)
   const indexLastVG = currentPage * VGperPage   //  1 * 15
   const indexFirstVG = indexLastVG - VGperPage  //   15 - 15 
   const currentsVG = allVideoGame.slice(indexFirstVG, indexLastVG)
 
 
   const paginado = (numberPage) => (
-    setCurrentPage(numberPage)            
+    setCurrentPage(numberPage)
   )
   useEffect(() => {
     dispatch(getVideogames())
@@ -55,110 +55,130 @@ function Home() {
     dispatch(orderByName(e.target.value))
     setCurrentPage(1);
   }
- 
+
   return (
+
     <div className='backgroundHome'>
       <div className='navTotal'>
-        <div className='navHome'>
-            <NavBar />
-           <SearchBar />
        
-          <div className='create'>
-            <Link to='/create/videogame' >Create a Videogame</Link>
-         </div>
-         
-        
-       </div>
-         <div className='All_select'>
- <div className="caja">
-          <select onChange={e => { handleOrderRating(e) }} className= 'select'>
-            <option value='all'>Rating</option>
-            <option value='ascRating'>Ascendent</option>
-            <option value='descRating'>Descendent</option>
-          </select>
+          <NavBar />
+       
+
+
+
+
+       
+
+        <nav class="navbar navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+
+                  <select onChange={e => { handleOrderRating(e) }} class="form-select" aria-label="Default select example">
+                    <option value='all' selected>Rating</option>
+                    {/* <selectclass="nav-link active" aria-current="page"> */}
+                    {/* <option >Rating</option> */}
+                    <option value='ascRating'>Ascendent</option>
+                    <option value='descRating'>Descendent</option>
+                  </select>
+                </li>
+
+                <li class="nav-item">
+
+                  <select onChange={e => { handleFilterGenres(e) }} class="form-select" aria-label="Default select example">
+
+                    <option value='genres'>Genres</option>
+                    {allGenres.map(e => {
+                      return (
+                        <option key={e} value={e}>{e}</option>
+                      )
+                    }
+                    )}
+
+                  </select>
+                </li>
+                <li class="nav-item">
+
+                  <select onChange={e => { handleFilterByCreation(e) }} class="form-select" aria-label="Default select example">
+                    <option value='all' >Creation</option>
+
+                    <option value='created_DB'>Created</option>
+                    <option value='created_Api'>Existing</option>
+
+                  </select>
+                </li>
+                <li class="nav-item">
+
+                  <select onChange={e => { handleOrderName(e) }} class="form-select" aria-label="Default select example">
+                    <option value='all' >Alphabetic</option>
+                    <option value='ascABC'>Ascendent</option>
+                    <option value='descABC'>Descendent</option>
+
+                  </select>
+                </li>
+                <li class="nav-item">
+<button onClick={e => { handleClick(e) }} className=' boton_refresh'><Link to='/home' >Refresh</Link></button>
+</li>
+              </ul>
+              <span class="navbar-text">
+                   <SearchBar />
+                
+              </span>
+            </div>
           </div>
-          <div className="caja">
-          <select onChange={e => { handleFilterGenres(e) }} className= 'select'>
-            <option value='genres'>Genres</option>
-            {allGenres.map(e => {
-              return (
-                <option key={e} value={e}>{e}</option>
-              )
-            }
-            )}
-            <option value='genres'>Genres</option>
-          </select>
-          </div>
-          <div className="caja">
-          <select onChange={e => { handleFilterByCreation(e) }} className= 'select'>
-            <option value='all' >Creation</option>
-            <option value='created_DB'>Created</option>
-            <option value='created_Api'>Existing</option>
-          </select>
-          </div> 
-          <div className="caja">
-          <select onChange={e => { handleOrderName(e) }} className= 'select' >
-            <option value='all'>Alphabetic</option>
-            <option value='ascABC'>Ascendent</option>
-            <option value='descABC'>Descendent</option>
-          </select>
-          <div/>
-          </div>
-          <div className="caja">
-             <button onClick={e => { handleClick(e) }}className=' boton_refresh'><Link to='/home' >Refresh filters</Link></button>
-          </div>
-       </div>
-        
-         
-         
-         
-         
+        </nav>
       </div>
       <div>
         <Paginado
-        VGperPage={VGperPage}
-        allVideoGame={allVideoGame.length}
-        paginado={paginado}
-        className='pagination'
-      />
-      <div className='cards'>
+          VGperPage={VGperPage}
+          allVideoGame={allVideoGame.length}
+          paginado={paginado}
+          className='pagination'
+        />
+        <div className='cards'>
 
 
-        {currentsVG.length !== 0 ?
+          {currentsVG.length !== 0 ?
 
-          currentsVG.map((v) => {
-            return (
-              <div key={v.id} >
-                
-                <Card
-                
-                  id={v.id}
-                  rating={v.rating}
-                  name={v.name}
-                  image={v.image}
-                  genres={v.genres.join(' ')}
-                  created= {v.created}
-                  
-                />
+            currentsVG.map((v) => {
+              return (
+                <div key={v.id} >
+
+                  <Card
+
+                    id={v.id}
+                    rating={v.rating}
+                    name={v.name}
+                    image={v.image}
+                    genres={v.genres.join(' ')}
+                    created={v.created}
+
+                  />
+                </div>
+              )
+            })
+
+            :
+            (
+              <div className='cargando'>
+
+                <h1 >Cargando...</h1>
               </div>
-            )
-          })  
 
-                         :
-          (
-            <div className='cargando'>
-            
-              <h1 >Cargando...</h1>
-            </div>
-  
-          )
+            )
           }
+        </div>
+
       </div>
-      
-       </div>
-      </div>
-  )}
-  
+    </div>
+  )
+}
+
 
 export default Home
  //   https://i.gifer.com/origin/a9/a90e81a8457d02b6a7f6fa188bf9ca4c_w200.webp

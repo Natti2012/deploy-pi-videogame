@@ -1,6 +1,6 @@
 .background {
- 
-  background-image: url('https://images4.alphacoders.com/600/thumb-1920-600528.png');
+ /* https://images4.alphacoders.com/600/thumb-1920-600528.png */
+  background-image: url('https://c.wallhere.com/photos/1f/d8/10000x6512_px_Joystick_play_PlayStation_PlayStation_4_PSP-1323397.jpg!d');
   background-size: cover;
   background-position: center center;
   background-size: cover;
@@ -14,7 +14,9 @@ height: 100vh;
 }
 
 
-
+.btn-inicio{
+  margin-top: 30%;
+}
 .inicio_button {
 	box-shadow: 3px 4px 0px 0px #e63c2d;
 	background:linear-gradient(to bottom, #73322c 5%, #b73a31 100%);
@@ -38,10 +40,13 @@ height: 100vh;
 	position:relative;
 	top:1px;
 }
+.texto-inicio{
+  margin-right: 50%;
+}
 .texto{
   font-family:cursive;
   font-size: 5rem;
-   color: rgb(79, 48, 9);
+   color: rgb(192, 57, 12);
 } 
         
 /* 

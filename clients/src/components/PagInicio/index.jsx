@@ -7,8 +7,14 @@ function PagInicio() {
 
   <section className='background'>
     <div >
-        <h1 className='texto'>Welcome..!!</h1>
-        <Link to='/home'><button className='inicio_button'>Start</button></Link>
+      <div className='texto-inicio'>
+<h1 className='texto'>Welcome..!!</h1>
+      </div>
+        
+        <div className='btn-inicio'>
+                  <Link to='/home'><button className='inicio_button'>Start</button></Link>
+
+        </div>
     </div>
 
   </section>
