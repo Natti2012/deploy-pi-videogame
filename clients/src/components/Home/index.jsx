@@ -7,6 +7,7 @@ import Paginado from '../Paginado';
 import NavBar from '../NavBar'
 import { Link } from 'react-router-dom'
 import SearchBar from '../SearchBar'
+import Footer from '../Footer'
 
 
 function Home() {
@@ -70,9 +71,10 @@ function Home() {
        
 
         <nav class="navbar navbar-expand-lg bg-dark">
-          <div class="container-fluid">
+          <div class="container-fluid" >
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+             
               <span class="navbar-toggler-icon "></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
@@ -132,9 +134,15 @@ function Home() {
             </div>
           </div>
         </nav>
-      </div>
-      <div>
+      </div> 
+      <div className='banner' >
+        <h3 className='bannerText'>VIDEOGAMES APP</h3>
+      <img src="https://www.xtrafondos.com/wallpapers/resoluciones/21/squid-game-minimal_2560x1440_8873.jpg" width="100%" className='bannerImg'/>
+
+          </div>
+      <div className='inicioEspacio'>
         <Paginado
+        currentPage={currentPage}
           VGperPage={VGperPage}
           allVideoGame={allVideoGame.length}
           paginado={paginado}
@@ -172,8 +180,19 @@ function Home() {
 
             )
           }
+         
         </div>
+        <Paginado
+        currentPage={currentPage}
+          VGperPage={VGperPage}
+          allVideoGame={allVideoGame.length}
+          paginado={paginado}
+          className='pagination'
+        />
 
+        <div>
+         <Footer/>
+        </div>
       </div>
     </div>
   )

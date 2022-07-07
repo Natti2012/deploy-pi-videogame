@@ -8,26 +8,26 @@ li {
    .button-pag {
     cursor: pointer;
     font-family: Courier New;
-    color: #41a3be;
+    color: #ffffff;
     font-size: 18px;
     padding: 10px;
     text-decoration: none;
-    border-radius: 50px;
-    border-radius: 50px;
-    box-shadow: 0px 1px 15px #bd6238;
-    text-shadow: 0px 1px 0px #666666;
-    border: solid #d91c71 3px;
+    /* border-radius: 5px;
+    border-radius: 5px; */
+    box-shadow: 0px 1px 15px #ED471D;
+    text-shadow: 0px 1px 0px #e1d2d2;
+    /* border: solid #ED471D 3px; */
   
     background: transparent
   }
   .button-pag:hover {
-   -webkit-box-shadow: 0px 0px 2px 5px rgba(138, 178, 230, 0.66); 
-    box-shadow: 0px 0px 2px 5px rgba(14, 121, 192, 0.66); 
+   -webkit-box-shadow: 0px 0px 2px 5px rgba(237, 177, 24, 0.79); 
+    box-shadow: 0px 0px 2px 5px rgba(229, 190, 15, 0.886); 
    
-    background-color: rgba(210, 180, 140, 0.718);
+    background-color: rgba(14, 14, 14, 0.718);
   }
   .button-pag:active{
-    -webkit-box-shadow: 0px 0px 2px 5px rgba(138, 178, 230, 0.66); 
-    box-shadow: 0px 0px 2px 5px rgba(14, 121, 192, 0.66);
-    background-color: rgba(175, 133, 167, 0.802);
+    /* -webkit-box-shadow: 0px 0px 2px 5px rgba(138, 178, 230, 0.66); 
+    box-shadow: 0px 0px 2px 5px rgba(14, 121, 192, 0.66); */
+    background-color: rgba(33, 1, 28, 0.906);
   }

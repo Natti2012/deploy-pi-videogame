@@ -21,10 +21,11 @@ export default function Card ({name, image, id, genres,rating,created }) {
 
   
     return (
-      
+       <Link to={`/videogame/${id}`} className="linkCard">
         <div className="card">
-          <div className="card-title" >
-            <h1 ><Link to={`/videogame/${id}`}>{name}</Link></h1>
+         
+            <div className="card-title" >
+            <h1 >{name}</h1>
           </div>
           <div className="imagen">
             <img  src={image} width="100%" alt={name} />
@@ -41,7 +42,7 @@ export default function Card ({name, image, id, genres,rating,created }) {
          }
 
         </div>
-     
+     </Link>
     );
 };
 // name: DataId.name,

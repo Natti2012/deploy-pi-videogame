@@ -149,19 +149,22 @@ function Createvideogame() {
   return (
   <div>
    <NavBar  />
+     <div className='titulo_form'><h3>ADD YOUR VIDEOGAME..</h3></div>
     <section className='create_backG' >
       
 
-      <div >
+      
  
-       <div className='titulo_form'><h3>Add your vigeogame..</h3></div>
+     
 
+        <div className='createImg'>
+          <img src='https://i.pinimg.com/564x/71/bb/27/71bb270005f96c1a7fbb5be05d8367b1.jpg'/>
+        </div>
         
-        <div>
           <form 
           
             onSubmit={e => handleOnSubmit(e)} className='form'>
-            <div>
+           
               <br />
               <label >Name
                 <input
@@ -210,6 +213,18 @@ function Createvideogame() {
                   {errors.image && <p className="danger">{errors.image}</p>}
                 </label>
                 <br />
+                </div>
+                 <label>Released
+                <input type='date'
+                  name="released"
+                  placeholder='Releaded date...yyyy-mm-dd'
+                  onChange={e => { handleInputChange(e) }}
+                  className='create_input'
+                />
+                {errors.released && <p className="danger">{errors.released}</p>}
+
+              </label>
+              <div className='content-select'>
                 <label>Platforms
 
                   <select onChange={e => { handleSelect(e) }}>
@@ -247,27 +262,20 @@ function Createvideogame() {
                   </ul>
                   {errors.platforms && <p className="danger">{errors.platforms}</p>}
                 </label>
+                </div>
 
-              </div>
-              <label>Released
-                <input type='date'
-                  name="released"
-                  placeholder='Releaded date...yyyy-mm-dd'
-                  onChange={e => { handleInputChange(e) }}
-                  className='create_input'
-                />
-                {errors.released && <p className="danger">{errors.released}</p>}
-
-              </label>
-            </div>
+              
+             
+            
             <div>
-              <br />
+             
 
 
-              <div>
-                <label>Genres
-                   <option name='genres' >Genres</option>
+              <div className='content-select'>
+                <label>
+                  Genres
                   <select onChange={e => { handleSelectGenres(e) }}>
+                     <option name='genres' >Genres</option>
                     {allGenres?.map(e => {
                       return (
                         <option name='genres' key={e} value={e}>{e}</option>
@@ -306,8 +314,8 @@ function Createvideogame() {
               
             </div>
           </form>
-        </div>
-      </div>
+    
+      
     </section>
      </div>
 
