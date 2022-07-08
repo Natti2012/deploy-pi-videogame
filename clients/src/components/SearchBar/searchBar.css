@@ -5,10 +5,11 @@
   background-color: #353b48;
   border-radius: 30px;
   padding: 10px;
+  position: relative;
   }
 
   .search_input{
-  color: white;
+  color: rgb(0, 0, 0);
   border: 0;
   outline: 0;
   background: none;
@@ -20,7 +21,7 @@
 
   .searchbar:hover > .search_input{
   padding: 0 10px;
-  width: 450px;
+  width: 250px;
   caret-color:red;
   transition: width 0.4s linear;
   }
@@ -33,11 +34,29 @@
   .search_icon{
   height: 40px;
   width: 40px;
-  float: right;
+  float: left;
   display: flex;
+ 
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   /* color:white; */
   text-decoration:none;
+  }
+  @media (max-width: 1090px) {
+    .searchbar{
+padding: 2px;
+height:40px ;
+
+}
+.search_icon{
+  height: 30px;
+  width: 30px;}
+  .search_input{
+     line-height: 30px;
+  }
+  .searchbar:hover > .search_input{
+    width: 150px; 
+     padding: 0 3px;
+  }
   }

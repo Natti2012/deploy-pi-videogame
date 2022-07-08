@@ -70,16 +70,16 @@ function Home() {
 
        
 
-        <nav class="navbar navbar-expand-lg bg-dark">
+        <nav class="navbar navbar-expand-lg bg-dark position-relative" >
           <div class="container-fluid" >
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              
               <span class="navbar-toggler-icon "></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item dropdown">
 
                   <select onChange={e => { handleOrderRating(e) }} class="form-select" aria-label="Default select example">
                     <option value='all' selected>Rating</option>
@@ -90,7 +90,7 @@ function Home() {
                   </select>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item dropdown">
 
                   <select onChange={e => { handleFilterGenres(e) }} class="form-select" aria-label="Default select example">
 
@@ -114,7 +114,7 @@ function Home() {
 
                   </select>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item dropdown">
 
                   <select onChange={e => { handleOrderName(e) }} class="form-select" aria-label="Default select example">
                     <option value='all' >Alphabetic</option>
@@ -123,11 +123,11 @@ function Home() {
 
                   </select>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item dropdown">
 <button onClick={e => { handleClick(e) }} className=' boton_refresh'><Link to='/home' >Refresh</Link></button>
 </li>
               </ul>
-              <span class="navbar-text">
+              <span class="navbar-text dropdown">
                    <SearchBar />
                 
               </span>

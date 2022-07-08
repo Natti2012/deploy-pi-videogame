@@ -54,9 +54,11 @@ background-position: center center;
       box-shadow: 0px 1px 15px #bd6238;
       text-shadow: 0px 1px 0px #666666;
       padding: 10px;
+ 
+
   }
   .banner{
-      position: relative
+      
   }
   
    @media (max-width: 1750px) {
@@ -98,9 +100,7 @@ margin-top: 8%;}
 }
     @media (max-width: 1080px) {
        .bannerText{
-     font-size:70px;
-     margin-left: 25%;
-      margin-top: 2%;
+   display: none;
 } 
  .inicioEspacio{
 margin-top: 10%;}
@@ -111,11 +111,7 @@ margin-top: 10%;}
 }
   }
 @media (max-width: 870px) {
-      .bannerText{
-     font-size:50px;
-     margin-left: 25%;
-      margin-top: 1%;
-}
+  
 .inicioEspacio{
 margin-top: 11%;}
 .pagination{
@@ -126,19 +122,29 @@ margin-top: 11%;}
 }   
        
  @media (max-width: 630px) {
-   .bannerText{
-     font-size:30px;
-     margin-left: 30%;
-      margin-top: 0%;
-}    
+    
 .inicioEspacio{
-margin-top: 13%;}
+margin-top: 25%;}
 .pagination{
     margin-left: 20%;
     
     margin-top: 5%;
-}
+}}
+ @media (max-width: 430px) {
+  
 
+ .pagination{
+    margin-left:10%;
+    
+    margin-top: 5%;
+}
+.inicioEspacio{
+margin-top: 38%;}
+.pagination{
+    margin-left: 0%;
+    
+    margin-top: 5%;
+}
 }
   .create{
  -webkit-box-shadow: 0px 0px 11px 8px rgba(83, 85, 87, 0.66); 
