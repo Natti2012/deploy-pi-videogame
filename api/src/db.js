@@ -38,11 +38,7 @@ let sequelize =
 //   logging: false, // set to console.log to see the raw SQL queries
 //   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 // });
-<<<<<<< HEAD
 const basename = path.basename(__filename);
-=======
-// const basename = path.basename(__filename);
->>>>>>> f55b09b42e9f0e21a9b1c11a33f7e2def0c287f7
 
 const modelDefiners = [];
 
