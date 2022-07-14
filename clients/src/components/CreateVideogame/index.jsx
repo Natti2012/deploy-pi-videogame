@@ -28,7 +28,6 @@ export function validate(input) {
   return errors;
 }
 
-
 function Createvideogame() {
   const allVideogames= useSelector(state => state.videogames)
  const{id}= useParams()
