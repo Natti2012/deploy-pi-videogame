@@ -16,9 +16,9 @@ export default function SearchBar() {
     e.preventDefault()
     dispatch(getVideogames(name))
     setName('')
-    return(
-      dispatch(getVideogames())
-    )
+    // return(
+    //   dispatch(getVideogames())
+    // )
   }
 
 
